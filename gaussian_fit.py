@@ -259,6 +259,7 @@ def main():
     options = CommandLineParse()
 
     arch = psrchive.Archive_load(str(options.directory)+str(options.infile))
+    arch.dedisperse()
     arch.fscrunch()
     arch.tscrunch()
     arch.pscrunch()
